@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) UITableView *mainTableView;
 
+@property (strong, nonatomic) NSDictionary <NSString *, NSInvocation *> *eventStrategy;
+
 @end
 
 @implementation ViewController
@@ -31,13 +33,48 @@
     /*
      do things you want
      */
-    self.navigationItem.title = [NSString stringWithFormat:@"%@", userInfo[@"line"]];
     
     
+    NSInvocation *invocation = self.eventStrategy[eventName];
+    [invocation setArgument:&userInfo atIndex:2];
+    [invocation invokeWithTarget:self];
     
     // 如果需要让事件继续往上传递，则调用下面的语句
     // [super routerEventWithName:eventName userInfo:userInfo];
 }
+
+- (NSDictionary <NSString *, NSInvocation *> *)eventStrategy {
+    if (_eventStrategy == nil) {
+        _eventStrategy = @{
+                           @"TableViewCellButtonClick" : [self createInvocationWithSelector:@selector(TableViewCellButtonClick:)]
+//                           kBLGoodsDetailPromotionEvent:[self createInvocationWithSelector:@selector(promotionEvent:)],
+//                           kBLGoodsDetailScoreEvent:[self createInvocationWithSelector:@selector(scoreEvent:)],
+//                           kBLGoodsDetailTargetAddressEvent:[self createInvocationWithSelector:@selector(targetAddressEvent:)],
+//                           kBLGoodsDetailServiceEvent:[self createInvocationWithSelector:@selector(serviceEvent:)],
+//                           kBLGoodsDetailSKUSelectionEvent:[self createInvocationWithSelector:@selector(skuSelectionEvent:)],
+                           };
+    }
+    return _eventStrategy;
+}
+
+
+- (NSInvocation *)createInvocationWithSelector:(SEL)selector {
+    
+    
+    NSMethodSignature *sig = [[self class] instanceMethodSignatureForSelector:selector];
+    
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:sig];
+    
+    [invocation setSelector:selector];
+    
+    return invocation;
+}
+
+- (void)TableViewCellButtonClick:(NSDictionary *)userInfo {
+    
+    self.navigationItem.title = [NSString stringWithFormat:@"%@", userInfo[@"line"]];
+}
+
 
 
 #pragma mark - TableView Delegate & DataSource

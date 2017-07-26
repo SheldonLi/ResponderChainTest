@@ -27,7 +27,7 @@
 
 - (IBAction)click:(id)sender {
     
-    [self routerEventWithName:@"TableViewCell" userInfo:@{@"line" : self.lineLabel.text}];
+    [self routerEventWithName:@"TableViewCellButtonClick" userInfo:@{@"line" : self.lineLabel.text}];
 }
 
 @end
