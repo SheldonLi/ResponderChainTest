@@ -1,0 +1,32 @@
+//
+//  TableViewCell.m
+//  ResponderChainTest
+//
+//  Created by 李少游 on 2017/7/26.
+//  Copyright © 2017年 SheldonLi. All rights reserved.
+//
+
+#import "TableViewCell.h"
+
+@implementation TableViewCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+    
+    
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+
+- (IBAction)click:(id)sender {
+    
+    
+}
+
+@end
