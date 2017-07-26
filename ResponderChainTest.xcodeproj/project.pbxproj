@@ -15,6 +15,7 @@
 		BF1B8FC91F28A9A8006C5A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1B8FC71F28A9A8006C5A09 /* LaunchScreen.storyboard */; };
 		BF1B8FD31F28AC1F006C5A09 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1B8FD11F28AC1F006C5A09 /* TableViewCell.m */; };
 		BF1B8FD41F28AC1F006C5A09 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1B8FD21F28AC1F006C5A09 /* TableViewCell.xib */; };
+		BF1B8FD71F28B379006C5A09 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1B8FD61F28B379006C5A09 /* UIResponder+Router.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		BF1B8FD01F28AC1F006C5A09 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		BF1B8FD11F28AC1F006C5A09 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		BF1B8FD21F28AC1F006C5A09 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		BF1B8FD51F28B379006C5A09 /* UIResponder+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
+		BF1B8FD61F28B379006C5A09 /* UIResponder+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				BF1B8FC71F28A9A8006C5A09 /* LaunchScreen.storyboard */,
 				BF1B8FCA1F28A9A8006C5A09 /* Info.plist */,
 				BF1B8FB91F28A9A8006C5A09 /* Supporting Files */,
+				BF1B8FD51F28B379006C5A09 /* UIResponder+Router.h */,
+				BF1B8FD61F28B379006C5A09 /* UIResponder+Router.m */,
 			);
 			path = ResponderChainTest;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1B8FC11F28A9A8006C5A09 /* ViewController.m in Sources */,
+				BF1B8FD71F28B379006C5A09 /* UIResponder+Router.m in Sources */,
 				BF1B8FD31F28AC1F006C5A09 /* TableViewCell.m in Sources */,
 				BF1B8FBE1F28A9A8006C5A09 /* AppDelegate.m in Sources */,
 				BF1B8FBB1F28A9A8006C5A09 /* main.m in Sources */,

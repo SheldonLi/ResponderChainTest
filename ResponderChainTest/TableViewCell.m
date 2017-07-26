@@ -7,6 +7,7 @@
 //
 
 #import "TableViewCell.h"
+#import "UIResponder+Router.h"
 
 @implementation TableViewCell
 
@@ -26,7 +27,7 @@
 
 - (IBAction)click:(id)sender {
     
-    
+    [self routerEventWithName:@"TableViewCell" userInfo:@{@"line" : self.lineLabel.text}];
 }
 
 @end

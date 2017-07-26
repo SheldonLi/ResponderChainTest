@@ -25,6 +25,21 @@
     
 }
 
+#pragma mark - event response
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
+    
+    /*
+     do things you want
+     */
+    self.navigationItem.title = [NSString stringWithFormat:@"%@", userInfo[@"line"]];
+    
+    
+    
+    // 如果需要让事件继续往上传递，则调用下面的语句
+    // [super routerEventWithName:eventName userInfo:userInfo];
+}
+
+
 #pragma mark - TableView Delegate & DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
