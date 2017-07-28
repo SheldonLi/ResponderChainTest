@@ -46,7 +46,9 @@
 - (NSDictionary <NSString *, NSInvocation *> *)eventStrategy {
     if (_eventStrategy == nil) {
         _eventStrategy = @{
-                           @"TableViewCellButtonClick" : [self createInvocationWithSelector:@selector(TableViewCellButtonClick:)]
+                           @"TableViewCellButtonClick" : [self createInvocationWithSelector:@selector(TableViewCellButtonClick:)],
+                           @"MiddleButtonClick" : [self createInvocationWithSelector:@selector(TableViewCellMiddleButtonClick:)],
+                           @"ChildCellButtonClick" : [self createInvocationWithSelector:@selector(ChildCellMiddleButtonClick:)]
 //                           kBLGoodsDetailPromotionEvent:[self createInvocationWithSelector:@selector(promotionEvent:)],
 //                           kBLGoodsDetailScoreEvent:[self createInvocationWithSelector:@selector(scoreEvent:)],
 //                           kBLGoodsDetailTargetAddressEvent:[self createInvocationWithSelector:@selector(targetAddressEvent:)],
@@ -75,6 +77,15 @@
     self.navigationItem.title = [NSString stringWithFormat:@"%@", userInfo[@"line"]];
 }
 
+- (void)TableViewCellMiddleButtonClick:(NSDictionary *)userInfo {
+    
+    self.navigationItem.title = [NSString stringWithFormat:@"middle-%@", userInfo[@"line"]];
+}
+
+- (void)ChildCellMiddleButtonClick:(NSDictionary *)userInfo {
+    
+    self.navigationItem.title = [NSString stringWithFormat:@"%@", userInfo[@"childViewLable"]];
+}
 
 
 #pragma mark - TableView Delegate & DataSource
@@ -96,7 +107,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+    return 180;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

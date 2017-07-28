@@ -16,6 +16,7 @@
 		BF1B8FD31F28AC1F006C5A09 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1B8FD11F28AC1F006C5A09 /* TableViewCell.m */; };
 		BF1B8FD41F28AC1F006C5A09 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1B8FD21F28AC1F006C5A09 /* TableViewCell.xib */; };
 		BF1B8FD71F28B379006C5A09 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1B8FD61F28B379006C5A09 /* UIResponder+Router.m */; };
+		BF1B8FDA1F2B1C65006C5A09 /* ChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1B8FD91F2B1C65006C5A09 /* ChildView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		BF1B8FD21F28AC1F006C5A09 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		BF1B8FD51F28B379006C5A09 /* UIResponder+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
 		BF1B8FD61F28B379006C5A09 /* UIResponder+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
+		BF1B8FD81F2B1C65006C5A09 /* ChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildView.h; sourceTree = "<group>"; };
+		BF1B8FD91F2B1C65006C5A09 /* ChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				BF1B8FD01F28AC1F006C5A09 /* TableViewCell.h */,
 				BF1B8FD11F28AC1F006C5A09 /* TableViewCell.m */,
 				BF1B8FD21F28AC1F006C5A09 /* TableViewCell.xib */,
+				BF1B8FD81F2B1C65006C5A09 /* ChildView.h */,
+				BF1B8FD91F2B1C65006C5A09 /* ChildView.m */,
 				BF1B8FC21F28A9A8006C5A09 /* Main.storyboard */,
 				BF1B8FC51F28A9A8006C5A09 /* Assets.xcassets */,
 				BF1B8FC71F28A9A8006C5A09 /* LaunchScreen.storyboard */,
@@ -170,6 +175,7 @@
 				BF1B8FD31F28AC1F006C5A09 /* TableViewCell.m in Sources */,
 				BF1B8FBE1F28A9A8006C5A09 /* AppDelegate.m in Sources */,
 				BF1B8FBB1F28A9A8006C5A09 /* main.m in Sources */,
+				BF1B8FDA1F2B1C65006C5A09 /* ChildView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +336,7 @@
 				BF1B8FCF1F28A9A8006C5A09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
